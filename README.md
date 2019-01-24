@@ -68,7 +68,8 @@ POST /api/index
   
 ### 3. Monitor how the `query` API performs under stress
 - We want to understand how the dashboard query performs both under stress and while idle
-  
+  . Interesting metrics are timeouts, latency, tail latency, etc.
+
 ```json
 GET /api/query/dashboard
 ```
