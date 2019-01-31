@@ -41,7 +41,7 @@ Backend Test Automation
 - You can change the amount of workers used by API server by changing the `WORKERS` environment variable.
 - API documentation is available on http://127.0.0.1:1234/swagger-ui/
 
-### 2. Write a simulator to stress test the `Indexing API`
+### 2. Write a simulator to stress test the `Indexing API` ** WITH RANDOM DATA **
 
 ```json
 POST /api/index
@@ -58,6 +58,7 @@ POST /api/index
 ```
 
 - In our system, we want to be able to index 200 of documents per-second.
+- Each document **has to be unique** (different filesize, name, etc.)
 - Data from the simulator needs to resemble real-world data distribution.
   - For example, there is a limited number of `hosts`, `directories`
   - There is a finite number of file extensions
